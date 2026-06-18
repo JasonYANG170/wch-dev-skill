@@ -1,0 +1,26 @@
+; Define address for FlashROM/code_segment and SRAM/data_segment
+; 64K-CODE-RAM + 64K-DATA-RAM
+
+ROM_LOAD 0x00000000
+{
+    FLASH_CODE 0x00000000
+    {
+        STARTUP.O (RESET, +First)
+;        SYSFREQ.O
+        * (+RO)
+;        L_*.O (+RO, +Last)
+    }
+    SRAM_DATA 0x00810000 0xFC00
+    {
+;        STARTUP.O (+RW,+ZI)
+        * (+RW,+ZI)
+    }
+    SRAM_HEAP +0 UNINIT
+    {
+        STARTUP.O (HEAP)
+    }
+    SRAM_STACK 0x00820000 UNINIT
+    {
+        STARTUP.O (STACK)
+    }
+}

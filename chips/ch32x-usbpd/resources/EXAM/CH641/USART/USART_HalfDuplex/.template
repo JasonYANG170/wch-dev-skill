@@ -1,0 +1,16 @@
+Mcu Type=CH641
+Address=0x08000000
+Target Path=obj\USART_HalfDuplex.hex
+Erase All=true
+Program=true
+Verify=true
+Reset=true
+
+Vendor=WCH
+Link=WCH-Link
+Toolchain=RISC-V
+Series=CH641
+Description=ROM(byte): 16K, SRAM(byte): 2K, CHIP PINS: 28, GPIO PORTS: 25.\nWCH CH641 Series is a special microcontroller for PD wireless charging based on Highland Barley RISC-V2A core design. The series has a wide pressure, single line tone Test, low power consumption, peripheral compact and other features. CH641 Built-in PD PHY, BC interface, differential input current sampling and AC small signal amplification and decoding. It supports USB PD and Type C fast charging function, BC1.2 and DCP and other HV charging protocols, and provides a DMA controller and 10-bit mode Digital conversion ADC, multi-group timer, USART serial port, I2C and other rich peripheral resources, provide overvoltage protection and overtemperature protection.
+
+PeripheralVersion=1.0
+MCU=CH641F

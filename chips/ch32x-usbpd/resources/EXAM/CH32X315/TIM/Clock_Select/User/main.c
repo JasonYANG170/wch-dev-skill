@@ -1,0 +1,113 @@
+/********************************** (C) COPYRIGHT *******************************
+* File Name          : main.c
+* Author             : WCH
+* Version            : V1.0.0
+* Date               : 2026/03/01
+* Description        : Main program body.
+*********************************************************************************
+* Copyright (c) 2021 Nanjing Qinheng Microelectronics Co., Ltd.
+* Attention: This software (modified or not) and binary are used for 
+* microcontroller manufactured by Nanjing Qinheng Microelectronics.
+*******************************************************************************/
+
+/*
+ *@Note
+ Clock source selection routine:
+ This example demonstrates two external clock source modes of TIM1.
+ External clock source mode 1: PB9 is used as clock input pin,
+ External clock source mode 2: PC3 is used as clock input pin.
+
+*/
+
+#include "debug.h"
+
+/* External Clock Mode Definition */
+#define ETR_CLK_MODE1    0
+#define ETR_CLK_MODE2    1
+
+/*  External Clock Mode Selection */
+//#define ETR_CLK          ETR_CLK_MODE1
+#define ETR_CLK ETR_CLK_MODE2
+
+/*********************************************************************
+ * @fn      TIM1_ETRClockMode1_Init
+ *
+ * @brief   Configures the External clock Mode1.
+ *
+ * @return  none
+ */
+void TIM1_ETRClockMode1_Init(void)
+{
+    GPIO_InitTypeDef GPIO_InitStructure = {0};
+    RCC_HB2PeriphClockCmd(RCC_HB2Periph_TIM1|RCC_HB2Periph_AFIO|RCC_HB2Periph_GPIOB, ENABLE);
+	GPIO_PinAFConfig(GPIOB, GPIO_PinSource9, GPIO_AF6);
+
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
+
+    TIM_CounterModeConfig(TIM1, TIM_CounterMode_Up);
+    TIM_SetAutoreload(TIM1, 0x1B);
+    /* GPIOB9 Input as TIM Clock Source */
+    TIM_TIxExternalClockConfig(TIM1, TIM_TIxExternalCLK1Source_TI2, TIM_ICPolarity_Rising, 0x00);
+    TIM_Cmd(TIM1, ENABLE);
+}
+
+/*********************************************************************
+ * @fn      TIM1_ETRClockMode2_Init
+ *
+ * @brief   Configures the External clock Mode2.
+ *
+ * @return  none
+ */
+void TIM1_ETRClockMode2_Init(void)
+{
+    RCC_HB2PeriphClockCmd(RCC_HB2Periph_TIM1|RCC_HB2Periph_AFIO, ENABLE);
+	GPIO_PinAFConfig(GPIOC, GPIO_PinSource3, GPIO_AF6);
+
+    TIM_CounterModeConfig(TIM1, TIM_CounterMode_Up);
+    TIM_SetAutoreload(TIM1, 0x3B);
+    /* GPIOC3 Input as TIM Clock Source */
+    TIM_ETRClockMode2Config(TIM1, TIM_ExtTRGPSC_OFF, TIM_ExtTRGPolarity_Inverted, 0x0);
+    TIM_Cmd(TIM1, ENABLE);
+}
+
+/*********************************************************************
+ * @fn      main
+ *
+ * @brief   Main program.
+ *
+ * @return  none
+ */
+int main(void)
+{
+    SystemCoreClockUpdate();
+    Delay_Init();
+    USART_Printf_Init(115200);	
+    printf("SystemClk:%d\r\n", SystemCoreClock);
+    printf( "ChipID:%08x\r\n", DBGMCU_GetCHIPID() );
+
+	printf("Clock Select\r\n");
+#if(ETR_CLK == ETR_CLK_MODE1)
+    TIM1_ETRClockMode1_Init();
+
+#elif(ETR_CLK == ETR_CLK_MODE2)
+    TIM1_ETRClockMode2_Init();
+
+#endif
+
+    while(1)
+    {
+        if(TIM_GetFlagStatus(TIM1, TIM_FLAG_CC2) != RESET)
+        {
+            TIM_ClearFlag(TIM1, TIM_FLAG_CC2);
+        }
+
+        if(TIM_GetFlagStatus(TIM1, TIM_FLAG_Update) != RESET)
+        {
+            printf("Count Update\r\n");
+
+            TIM_ClearFlag(TIM1, TIM_FLAG_Update);
+        }
+    }
+}

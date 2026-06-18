@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//MIFARECLASSIC_COMMON/wch_nfca_soft_pcd_mifare_classic.c=UTF-8
+encoding//MIFARECLASSIC_COMMON/wch_nfca_soft_pcd_mifare_classic.h=UTF-8
+encoding//NFCA_LIB/CH58x_NFCA_LIB.h=UTF-8
+encoding//PCD_SOFT_COMMON/wch_nfca_soft_pcd_bsp.c=UTF-8
+encoding//PCD_SOFT_COMMON/wch_nfca_soft_pcd_bsp.h=UTF-8
+encoding//PCD_SOFT_COMMON/wch_nfca_soft_pcd_config.h=UTF-8
+encoding//src/main.c=UTF-8

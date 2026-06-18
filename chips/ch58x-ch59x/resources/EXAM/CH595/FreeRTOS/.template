@@ -1,0 +1,17 @@
+Mcu Type=CH595/6
+Address=0x00000000
+Target Path=obj/FreeRTOS.hex
+Erase All=true
+Program=true
+Verify=true
+Reset=true
+
+Vendor=WCH
+Link=WCH-Link
+Toolchain=RISC-V
+Series=CH595
+RTOS=NoneOS
+MCU=CH595F
+Description=Website: https://www.wch.cn/products/CH595.html?\nROM(byte): 256K, SRAM(byte):32K, CHIP PINS: 28, GPIO PORTS: 20\nCH595 is a RISC-V microcontroller with integrated BLE wireless communication. It integrates a 2Mbps low-power Bluetooth BLE communication module, full-speed USB host and device controller and transceivers, segmented LCD driver module, key detection module, SPI, 4 serial ports, 14-channel ADC, touch key detection module and other abundant peripheral resources on the chip.
+
+PeripheralVersion=1.0
