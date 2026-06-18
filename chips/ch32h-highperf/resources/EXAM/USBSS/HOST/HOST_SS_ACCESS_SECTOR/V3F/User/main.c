@@ -1,0 +1,65 @@
+/********************************** (C) COPYRIGHT *******************************
+ * File Name          : main_v3f.c
+ * Author             : WCH
+ * Version            : V1.0.0
+ * Date               : 2025/03/01
+ * Description        : Main program body for V3F.
+ *********************************************************************************
+ * Copyright (c) 2025 Nanjing Qinheng Microelectronics Co., Ltd.
+ * Attention: This software (modified or not) and binary are used for
+ * microcontroller manufactured by Nanjing Qinheng Microelectronics.
+ *******************************************************************************/
+
+/*
+ *@Note
+  This routine demonstrates CH32H417 as a USB host accessing udisk sectors.
+  The file system of the USB disk needs to be FAT12/FAT16/FAT32.
+*/
+
+#include "debug.h"
+#include "hardware.h"
+
+/*********************************************************************
+ * @fn      main
+ *
+ * @brief   Main program.
+ *
+ * @return  none
+ */
+int main(void)
+{
+	SystemInit();
+	SystemAndCoreClockUpdate();
+	Delay_Init();
+	USART_Printf_Init(921600);
+
+	printf("SystemClk:%d\r\n", SystemClock);
+	printf("V3F SystemCoreClk:%d\r\n", SystemCoreClock);
+    printf("The Routine For Scanning UDISK Sectors Based on The USBSS Host\r\n");
+
+#if (Run_Core == Run_Core_V3FandV5F)
+	NVIC_WakeUp_V5F(Core_V5F_StartAddr);//wake up V5
+	HSEM_ITConfig(HSEM_ID0, ENABLE);
+	NVIC->SCTLR |= 1<<4;
+	RCC_HB1PeriphClockCmd(RCC_HB1Periph_PWR, ENABLE);
+	PWR_EnterSTOPMode(PWR_Regulator_ON, PWR_STOPEntry_WFE);
+	HSEM_ClearFlag(HSEM_ID0);
+	printf("V3F wake up\r\n");
+
+	Hardware();
+
+#elif (Run_Core == Run_Core_V3F)
+	Hardware();
+
+#elif (Run_Core == Run_Core_V5F)
+	NVIC_WakeUp_V5F(Core_V5F_StartAddr);//wake up V5
+	PWR_EnterSTOPMode(PWR_Regulator_ON, PWR_STOPEntry_WFE);
+	printf("V3F wake up\r\n");
+#endif
+
+	
+	while(1)
+	{
+		
+	}
+}

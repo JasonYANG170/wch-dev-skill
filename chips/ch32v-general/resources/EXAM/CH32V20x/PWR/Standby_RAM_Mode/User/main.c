@@ -1,0 +1,136 @@
+/********************************** (C) COPYRIGHT *******************************
+ * File Name          : main.c
+ * Author             : WCH
+ * Version            : V1.0.1
+ * Date               : 2025/04/26
+ * Description        : Main program body.
+ *********************************************************************************
+ * Copyright (c) 2021 Nanjing Qinheng Microelectronics Co., Ltd.
+ * Attention: This software (modified or not) and binary are used for 
+ * microcontroller manufactured by Nanjing Qinheng Microelectronics.
+ *******************************************************************************/
+
+/*
+ *@Note
+ * when LV is not enabled in standby mode, RAM 2k and 30K data holding routines:
+ * This routine demonstrates writing data at the specified location of 2K RAM and 30K RAM(Applicable to
+ * CH32V20x_D8 and CH32V20x_D8W,CH32V20x_D6 has a 20K RAM data holding option),then WFI enters STANDBY
+ * sleep mode, through the PA0 (wakeup) pin Input high level to exit standby mode, print RAM data after
+ * waking up, and test whether RAM is maintained data.
+ *
+ */
+
+#include "debug.h"
+
+/* Global define */
+
+/* Global Variable */
+
+/*********************************************************************
+ * @fn      TestDataWrite
+ *
+ * @brief   Write data to certain address of 2K RAM and 30K RAM.
+ *
+ * @return  none
+ */
+void TestDataWrite(void)
+{
+    uint32_t myAddr=0x20000000+10*1024;
+    uint32_t myAddr2=0x20000000+1*1024+512;
+    uint32_t i=0;
+    for(i=0;i<1024;i++)//Write 30K RAM
+    {
+        *(uint32_t volatile *)(myAddr+(i<<2)) = 0x33333333;
+    }
+    for(i=0;i<1024;i++)//Check 30K RAM
+    {
+        if((*(uint32_t volatile *)(myAddr+(i<<2))) != 0x33333333)
+        {
+            printf("Write 30K RAM Error!\r\n");
+            break;
+        }
+    }
+    printf("Write 30K RAM Successfully!\r\n");
+    for(i=0;i<10;i++)//Write 2K RAM
+    {
+        *(uint32_t volatile *)(myAddr2+(i<<2)) = 0x33333333;
+    }
+    for(i=0;i<10;i++)//Check 2K RAM
+    {
+        if((*(uint32_t volatile *)(myAddr2+(i<<2))) != 0x33333333)
+        {
+            printf("Write 2K RAM Error!\r\n");
+            break;
+        }
+    }
+    printf("Write 2K RAM Successfully!\r\n");
+
+}
+
+/*********************************************************************
+ * @fn      TestDataRead
+ *
+ * @brief   Print the data of certain address of 2K RAM and 30K RAM.
+ *
+ * @return  none
+ */
+void TestDataRead(void)
+{
+    uint32_t myAddr=0x20000000+10*1024;
+    uint32_t myAddr2=0x20000000+1*1024+512;
+    uint32_t i=0;
+    printf("2K RAM:\r\n");
+    for(i=0;i<10;i++)
+    {
+        printf("0x%08lx=0x%08lx\r\n",myAddr2+(i<<2),*(uint32_t volatile *)(myAddr2+(i<<2)));
+    }
+    printf("32K RAM:\r\n");
+    for(i=0;i<1024;i++)
+    {
+        printf("0x%08lx=0x%08lx\r\n",myAddr+(i<<2),*(uint32_t volatile *)(myAddr+(i<<2)));
+    }
+
+}
+
+/*********************************************************************
+ * @fn      main
+ *
+ * @brief   Main program.
+ *
+ * @return  none
+ */
+int main(void)
+{
+    GPIO_InitTypeDef GPIO_InitStructure = {0};
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
+    SystemCoreClockUpdate();
+    Delay_Init();
+    Delay_Ms(1000);
+    /* To reduce power consumption, unused GPIOs need to be set as pull-down inputs */
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA|RCC_APB2Periph_GPIOB|
+        RCC_APB2Periph_GPIOC|RCC_APB2Periph_GPIOD|RCC_APB2Periph_AFIO, ENABLE);
+    GPIO_PinRemapConfig(GPIO_Remap_SWJ_Disable,ENABLE); 
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_All;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;
+    GPIO_Init(GPIOA, &GPIO_InitStructure);
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
+    GPIO_Init(GPIOC, &GPIO_InitStructure);
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+    USART_Printf_Init(115200);
+    printf("SystemClk:%d\r\n", SystemCoreClock);
+    printf( "ChipID:%08x\r\n", DBGMCU_GetCHIPID() );
+
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR, ENABLE);
+
+    /* Delay 1.5s to avoid entering low power mode immediately after reset*/
+    Delay_Ms(1500);
+
+    TestDataRead();
+    printf("Standby RAM Mode Test\r\n");
+    TestDataWrite();
+    PWR_WakeUpPinCmd(ENABLE);
+    PWR_EnterSTANDBYMode_RAM();
+    while(1);
+}
+

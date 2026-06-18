@@ -1,0 +1,10 @@
+D:\WCH\CH32H417\20250611EVT\HOST_SS_UDISK\HOST_SS_UDISK.wvsln:
+-arm:${eclipse_home}\toolchain\arm-none-eabi-gcc\bin
+-build:${eclipse_home}\toolchain\Build Tools\bin
+-openocd name:openocd.exe
+-openocd path:${eclipse_home}\toolchain\OpenOCD\bin
+-rv:${eclipse_home}\toolchain\RISC-V Embedded GCC\bin
+D:\WCH\CH32H417\20250611EVT\HOST_SS_UDISK\V3F
+..\V3F
+D:\WCH\CH32H417\20250611EVT\HOST_SS_UDISK\V5F
+..\V5F
