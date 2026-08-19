@@ -2,6 +2,10 @@
 
 > **适用摘要**: 实现 IAP (In-Application Programming) 引导程序和 BLE 空中固件升级。
 
+> SDK/EVT: CH57xEVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch57x/resources/`, closest `chips/ch57x/resources/EXAM/` example, and this recipe path `chips/ch57x/recipes/iap_ota.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "IAP 引导程序"

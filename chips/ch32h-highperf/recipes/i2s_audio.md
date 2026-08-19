@@ -1,5 +1,10 @@
 # I2S Audio Interface
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/i2s_audio.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has I2S (Inter-IC Sound) capability on SPI2 and SPI3 peripherals. Supports Master/Slave TX/RX modes, Phillips standard, 16/24/32-bit data, and various audio frequencies. I2S uses DMA for efficient audio data transfer.

@@ -2,6 +2,10 @@
 
 > **适用摘要**: 实现 BLE IoCHub 数据透传网络，通过自定义帧协议实现设备与手机之间的双向数据交互。
 
+> SDK/EVT: CH57xEVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch57x/resources/`, closest `chips/ch57x/resources/EXAM/` example, and this recipe path `chips/ch57x/recipes/ble_iochub.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "BLE IoCHub"

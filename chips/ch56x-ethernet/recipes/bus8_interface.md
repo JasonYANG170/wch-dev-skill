@@ -1,5 +1,10 @@
 # Recipe: 8-Bit Bus Interface (BUS8)
 
+> Applies to: CH569; confirm the exact part number before coding.
+> SDK/EVT: CH56x EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch56x-ethernet/resources/`, closest `chips/ch56x-ethernet/resources/EXAM/` example, and this recipe path `chips/ch56x-ethernet/recipes/bus8_interface.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 Use the BUS8 (External Bus) peripheral to interface with external devices via an

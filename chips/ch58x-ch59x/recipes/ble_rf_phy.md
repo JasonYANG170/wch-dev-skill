@@ -2,6 +2,10 @@
 
 > **适用摘要**: 实现 CH58x/CH59x 非标 2.4GHz 射频物理层直接收发测试，绕过 BLE 协议栈直接操作 RF 硬件，用于射频性能评估和信道测试
 
+> SDK/EVT: CH58x/CH59x EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch58x-ch59x/resources/`, closest `chips/ch58x-ch59x/resources/EXAM/` example, and this recipe path `chips/ch58x-ch59x/recipes/ble_rf_phy.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "RF 射频测试"

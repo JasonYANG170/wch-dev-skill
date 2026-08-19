@@ -1,5 +1,10 @@
 # Recipe: GPIO Control
 
+> Applies to: CH569; confirm the exact part number before coding.
+> SDK/EVT: CH56x EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch56x-ethernet/resources/`, closest `chips/ch56x-ethernet/resources/EXAM/` example, and this recipe path `chips/ch56x-ethernet/recipes/gpio_control.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 Configure GPIO pins for digital input, output, interrupts, and peripheral pin remapping

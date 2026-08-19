@@ -2,6 +2,10 @@
 
 > **适用摘要**: 配置 CH58x/CH59x GPIO 引脚的输入、输出、中断功能
 
+> SDK/EVT: CH58x/CH59x EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch58x-ch59x/resources/`, closest `chips/ch58x-ch59x/resources/EXAM/` example, and this recipe path `chips/ch58x-ch59x/recipes/gpio_control.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "配置 GPIO 引脚"

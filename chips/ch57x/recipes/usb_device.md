@@ -2,6 +2,10 @@
 
 > **适用摘要**: 配置 CH57x 作为 USB 设备，实现 CDC 串口、HID 或自定义设备。
 
+> SDK/EVT: CH57xEVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch57x/resources/`, closest `chips/ch57x/resources/EXAM/` example, and this recipe path `chips/ch57x/recipes/usb_device.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "USB 串口"

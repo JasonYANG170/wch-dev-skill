@@ -1,5 +1,10 @@
 # Recipe: USB 3.0 Superspeed Device/Host (CH569)
 
+> Applies to: CH569; confirm the exact part number before coding.
+> SDK/EVT: CH56x EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch56x-ethernet/resources/`, closest `chips/ch56x-ethernet/resources/EXAM/` example, and this recipe path `chips/ch56x-ethernet/recipes/usb3_device.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 Configure USB 3.0 Superspeed (5Gbps) device or host mode on CH569.

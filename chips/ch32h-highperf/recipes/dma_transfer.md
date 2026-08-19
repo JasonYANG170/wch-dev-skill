@@ -1,5 +1,10 @@
 # DMA Transfer
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/dma_transfer.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has DMA1 and DMA2, each with 8 channels. A DMAMUX (DMA Multiplexer) allows flexible mapping of peripheral requests to DMA channels.

@@ -1,5 +1,10 @@
 # DVP Camera Interface
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/dvp_camera.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has a Digital Video Port (DVP) for connecting parallel camera sensors (e.g., OV2640). Supports 8-bit data width, configurable HSYNC/VSYNC polarity, JPEG mode with dual DMA buffers, and interrupt-driven frame capture.

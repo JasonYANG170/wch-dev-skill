@@ -1,5 +1,10 @@
 # Touch Key Sensing
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/touchkey.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has a Touch Key (TKey) peripheral for capacitive touch sensing. It uses the ADC to measure the charge/discharge time of a touch pad, which changes when a finger is nearby. Supports multiple touch channels and works with the standard ADC infrastructure.

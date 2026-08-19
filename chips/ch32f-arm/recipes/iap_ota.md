@@ -1,5 +1,10 @@
 # Recipe: IAP (In-Application Programming)
 
+> Applies to: CH32F103, CH32F20x, and CH32M030; confirm the exact part number before coding.
+> SDK/EVT: CH32F/CH32M EVT-style WCH package for Keil MDK or MounRiver Studio.
+> Evidence: `chips/ch32f-arm/resources/`, closest `chips/ch32f-arm/resources/EXAM/` example, and this recipe path `chips/ch32f-arm/recipes/iap_ota.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 Implement bootloader and application firmware update mechanism on CH32F10x/CH32F20x.

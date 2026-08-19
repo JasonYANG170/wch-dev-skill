@@ -2,6 +2,11 @@
 
 > **Summary**: Configure GPIO pins on CH5xx 8051 chips -- input, output, push-pull, open-drain, quasi-bidirectional mode, and GPIO interrupt setup.
 
+> Applies to: CH543, CH545, CH549, CH552, CH554, CH555, and CH559; confirm the exact part number before coding.
+> SDK/EVT: CH5xx EVT-style WCH package for Keil C51 or SDCC.
+> Evidence: `chips/ch5xx-8051/resources/`, closest `chips/ch5xx-8051/resources/EXAM/` example, and this recipe path `chips/ch5xx-8051/recipes/gpio_control.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Trigger Intent
 
 - "Configure GPIO pin"

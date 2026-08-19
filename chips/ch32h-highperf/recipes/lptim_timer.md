@@ -1,5 +1,10 @@
 # LPTIM Low-Power Timer
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/lptim_timer.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has LPTIM (Low-Power Timer) peripherals that can run from LSI (internal low-speed oscillator) or external clock sources. LPTIM continues operating in Sleep and Stop modes, making it ideal for periodic wakeup from low-power states.

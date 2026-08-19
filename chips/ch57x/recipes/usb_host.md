@@ -2,6 +2,10 @@
 
 > **适用摘要**: 配置 CH57x 作为 USB 主机，实现设备枚举、AOA 协议和 U 盘文件系统。
 
+> SDK/EVT: CH57xEVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch57x/resources/`, closest `chips/ch57x/resources/EXAM/` example, and this recipe path `chips/ch57x/recipes/usb_host.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "USB 主机"

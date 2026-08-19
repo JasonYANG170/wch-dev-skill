@@ -1,5 +1,10 @@
 # USART/UART Communication
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/uart_comm.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has up to 8 USART/UART interfaces (USART1-3, UART4-8). USART1-3 support synchronous mode, hardware flow control (RTS/CTS), LIN, SmartCard, and IrDA. UART4-8 are asynchronous only.

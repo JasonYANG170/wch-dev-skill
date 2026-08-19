@@ -1,5 +1,10 @@
 # Recipe: I2S Audio
 
+> Applies to: CH32V103, CH32V20x, CH32V307, and CH32V407; confirm the exact part number before coding.
+> SDK/EVT: CH32V EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32v-general/resources/`, closest `chips/ch32v-general/resources/EXAM/` example, and this recipe path `chips/ch32v-general/recipes/i2s_audio.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## When to Use
 User wants to implement I2S (Inter-IC Sound) audio data transfer, master/slave I2S communication, or I2S with DMA for continuous audio streaming.
 

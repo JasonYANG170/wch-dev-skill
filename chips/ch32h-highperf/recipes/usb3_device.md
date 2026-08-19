@@ -1,5 +1,10 @@
 # USB 3.0 Superspeed Device
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/usb3_device.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 is one of the very few microcontrollers with USB 3.0 Superspeed (5 Gbps) support. The USBSS peripheral works in conjunction with the SerDes PHY for high-speed serial communication.

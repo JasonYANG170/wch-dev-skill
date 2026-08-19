@@ -2,6 +2,10 @@
 
 > **Applicable summary**: Configure the hardware key scan matrix for low-power button detection with interrupt and sleep/wake support.
 
+> SDK/EVT: CH57xEVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch57x/resources/`, closest `chips/ch57x/resources/EXAM/` example, and this recipe path `chips/ch57x/recipes/keyscan.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Trigger Intent
 
 - "key scan"

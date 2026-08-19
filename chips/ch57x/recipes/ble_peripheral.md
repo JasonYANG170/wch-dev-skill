@@ -2,6 +2,10 @@
 
 > **适用摘要**: 创建 BLE 从机角色，实现广播、GATT 服务、特征值读写和通知功能。
 
+> SDK/EVT: CH57xEVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch57x/resources/`, closest `chips/ch57x/resources/EXAM/` example, and this recipe path `chips/ch57x/recipes/ble_peripheral.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "创建 BLE 从机"

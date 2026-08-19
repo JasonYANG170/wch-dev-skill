@@ -1,5 +1,10 @@
 # IAP/OTA Update
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/iap_ota.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 supports In-Application Programming (IAP) for firmware updates. The bootloader occupies Flash 0x0000-0xFFFF, and the application starts at 0x10000. OTA (Over-The-Air) updates can be implemented via USB, UART, Ethernet, or other communication interfaces.

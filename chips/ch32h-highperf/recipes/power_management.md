@@ -1,5 +1,10 @@
 # Power Management
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/power_management.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 supports multiple power modes for low-power applications: Sleep, Stop, and Standby. The PWR peripheral also provides PVD (Programmable Voltage Detector) and VIO18 configuration.

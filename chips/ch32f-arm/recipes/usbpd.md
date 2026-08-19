@@ -1,5 +1,10 @@
 # Recipe: USB Power Delivery (USB-PD)
 
+> Applies to: CH32F103, CH32F20x, and CH32M030; confirm the exact part number before coding.
+> SDK/EVT: CH32F/CH32M EVT-style WCH package for Keil MDK or MounRiver Studio.
+> Evidence: `chips/ch32f-arm/resources/`, closest `chips/ch32f-arm/resources/EXAM/` example, and this recipe path `chips/ch32f-arm/recipes/usbpd.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 Implement USB Power Delivery (USB-PD) Sink (SNK) and Source (SRC) roles on CH32M030 using the built-in USBPD peripheral. The USB-PD protocol enables power negotiation up to 100W over USB-C connectors.

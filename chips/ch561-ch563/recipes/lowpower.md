@@ -1,5 +1,10 @@
 # Recipe: Low Power Modes (Register-Based)
 
+> Applies to: CH561 and CH563; confirm the exact part number before coding.
+> SDK/EVT: CH561/CH563 EVT-style WCH package for Keil MDK.
+> Evidence: `chips/ch561-ch563/resources/`, closest `chips/ch561-ch563/resources/EXAM/` example, and this recipe path `chips/ch561-ch563/recipes/lowpower.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 Configure CH561/CH563 power-saving modes with GPIO wakeup sources.

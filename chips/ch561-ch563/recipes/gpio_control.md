@@ -1,5 +1,10 @@
 # Recipe: GPIO Control (Register-Based)
 
+> Applies to: CH561 and CH563; confirm the exact part number before coding.
+> SDK/EVT: CH561/CH563 EVT-style WCH package for Keil MDK.
+> Evidence: `chips/ch561-ch563/resources/`, closest `chips/ch561-ch563/resources/EXAM/` example, and this recipe path `chips/ch561-ch563/recipes/gpio_control.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 Configure GPIO pins for digital input, output, and interrupts on CH561/CH563

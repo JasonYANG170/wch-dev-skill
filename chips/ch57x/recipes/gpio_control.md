@@ -2,6 +2,10 @@
 
 > **适用摘要**: 配置 GPIO 引脚的输入、输出、中断和上下拉功能。
 
+> SDK/EVT: CH57xEVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch57x/resources/`, closest `chips/ch57x/resources/EXAM/` example, and this recipe path `chips/ch57x/recipes/gpio_control.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "配置 GPIO"

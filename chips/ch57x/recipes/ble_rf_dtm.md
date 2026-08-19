@@ -2,6 +2,10 @@
 
 > **适用摘要**: 进行 RF 射频性能测试、非标准无线收发、跳频通信。
 
+> SDK/EVT: CH57xEVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch57x/resources/`, closest `chips/ch57x/resources/EXAM/` example, and this recipe path `chips/ch57x/recipes/ble_rf_dtm.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "RF 测试"

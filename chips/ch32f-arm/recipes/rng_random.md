@@ -1,5 +1,10 @@
 # Recipe: Random Number Generator (RNG)
 
+> Applies to: CH32F103, CH32F20x, and CH32M030; confirm the exact part number before coding.
+> SDK/EVT: CH32F/CH32M EVT-style WCH package for Keil MDK or MounRiver Studio.
+> Evidence: `chips/ch32f-arm/resources/`, closest `chips/ch32f-arm/resources/EXAM/` example, and this recipe path `chips/ch32f-arm/recipes/rng_random.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 Use the hardware Random Number Generator (RNG) peripheral on CH32F20x to generate true random 32-bit numbers. The RNG uses a hardware entropy source and is much faster and more secure than software pseudo-random generators.

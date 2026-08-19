@@ -2,6 +2,10 @@
 
 > **适用摘要**: 配置 CH592 片上 LCD 控制器驱动段码液晶屏
 
+> SDK/EVT: CH58x/CH59x EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch58x-ch59x/resources/`, closest `chips/ch58x-ch59x/resources/EXAM/` example, and this recipe path `chips/ch58x-ch59x/recipes/lcd_display.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "LCD 显示"

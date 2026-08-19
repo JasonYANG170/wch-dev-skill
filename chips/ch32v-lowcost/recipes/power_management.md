@@ -1,5 +1,10 @@
 # Recipe: Power Management
 
+> Applies to: CH32V003, CH32V006, and CH32L103; confirm the exact part number before coding.
+> SDK/EVT: CH32V low-cost EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32v-lowcost/resources/`, closest `chips/ch32v-lowcost/resources/EXAM/` example, and this recipe path `chips/ch32v-lowcost/recipes/power_management.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Scenario
 Configure low-power modes -- sleep mode, standby mode, PVD voltage monitoring, and auto-wakeup.
 

@@ -2,6 +2,10 @@
 
 > **适用摘要**: 实现 CH58x/CH59x BLE 吞吐量测试，包含 Central 端和 Peripheral 端，通过通知持续发送数据并统计接收速率
 
+> SDK/EVT: CH58x/CH59x EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch58x-ch59x/resources/`, closest `chips/ch58x-ch59x/resources/EXAM/` example, and this recipe path `chips/ch58x-ch59x/recipes/ble_speed_test.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "BLE 速率测试"

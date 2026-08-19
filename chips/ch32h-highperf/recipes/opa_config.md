@@ -1,5 +1,10 @@
 # OPA Operational Amplifier
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/opa_config.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has built-in OPA (Operational Amplifier) peripherals for analog signal conditioning. Supports PGA (Programmable Gain Amplifier) mode with configurable gain, differential/single-ended input, and internal feedback. Useful for sensor amplification without external op-amp components.

@@ -1,5 +1,10 @@
 # LCD Display (LTDC)
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/lcd_display.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has an integrated LTDC (LCD-TFT Display Controller) supporting RGB888, RGB565, ARGB8888, and other pixel formats. It has 2 layers with alpha blending, CLUT (Color Look-Up Table), and color keying. Combined with DMA2D (GPHA), it's ideal for GUI frameworks like LVGL.

@@ -2,6 +2,10 @@
 
 > **适用摘要**: 实现 CH58x/CH59x BLE ANCS 客户端，连接 iPhone/iPad 后接收来电、短信、应用通知等 iOS 通知，并可执行确认/忽略等操作
 
+> SDK/EVT: CH58x/CH59x EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch58x-ch59x/resources/`, closest `chips/ch58x-ch59x/resources/EXAM/` example, and this recipe path `chips/ch58x-ch59x/recipes/ble_ancs.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "BLE ANCS"

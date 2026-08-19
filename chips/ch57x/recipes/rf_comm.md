@@ -2,6 +2,10 @@
 
 > **Applicable summary**: Use the 2.4GHz RF transceiver for non-standard (non-BLE) wireless communication, including basic TX/RX, UART bridge, and direct test mode.
 
+> SDK/EVT: CH57xEVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch57x/resources/`, closest `chips/ch57x/resources/EXAM/` example, and this recipe path `chips/ch57x/recipes/rf_comm.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Trigger Intent
 
 - "RF communication"

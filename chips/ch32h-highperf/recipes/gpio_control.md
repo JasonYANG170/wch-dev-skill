@@ -1,5 +1,10 @@
 # GPIO Control
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/gpio_control.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 The CH32H417 has up to 112 GPIO pins across 7 ports (GPIOA-GPIOF). Each pin can be configured as input, output, alternate function, or analog. The chip uses a flexible AF (Alternate Function) mapping system with 16 AF options per pin.

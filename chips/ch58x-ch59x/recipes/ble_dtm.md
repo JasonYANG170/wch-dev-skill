@@ -2,6 +2,10 @@
 
 > **适用摘要**: 实现 CH58x/CH59x BLE Direct Test Mode，符合蓝牙 SIG DTM 规范，支持通过 UART 或 USB 接口接收 HCI DTM 命令进行射频 TX/RX 测试
 
+> SDK/EVT: CH58x/CH59x EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch58x-ch59x/resources/`, closest `chips/ch58x-ch59x/resources/EXAM/` example, and this recipe path `chips/ch58x-ch59x/recipes/ble_dtm.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "BLE DTM 测试"

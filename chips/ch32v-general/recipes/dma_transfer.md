@@ -1,5 +1,10 @@
 # Recipe: DMA Transfer
 
+> Applies to: CH32V103, CH32V20x, CH32V307, and CH32V407; confirm the exact part number before coding.
+> SDK/EVT: CH32V EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32v-general/resources/`, closest `chips/ch32v-general/resources/EXAM/` example, and this recipe path `chips/ch32v-general/recipes/dma_transfer.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## When to Use
 User wants to implement DMA transfers for memory-to-memory copy, peripheral-to-memory, or circular buffer modes.
 

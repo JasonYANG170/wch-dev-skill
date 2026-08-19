@@ -2,6 +2,10 @@
 
 > **适用摘要**: 使用片上 Flash 或 DataFlash (EEPROM) 进行数据读写存储。
 
+> SDK/EVT: CH57xEVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch57x/resources/`, closest `chips/ch57x/resources/EXAM/` example, and this recipe path `chips/ch57x/recipes/flash_storage.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "Flash 读写"

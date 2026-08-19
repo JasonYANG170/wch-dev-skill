@@ -1,5 +1,10 @@
 # GPHA Graphics Accelerator
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/gpha_graphics.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has a GPHA (Graphics Hardware Accelerator, also known as DMA2D) for hardware-accelerated 2D graphics operations. Supports Register-to-Memory (R2M) solid color fill and Memory-to-Memory (M2M) pixel format conversion with alpha blending. Much faster than CPU-based fills.

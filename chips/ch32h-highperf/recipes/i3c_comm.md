@@ -1,5 +1,10 @@
 # I3C Communication
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/i3c_comm.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has an I3C (MIPI Improved Inter-Integrated Circuit) controller supporting both I2C legacy and I3C native protocols. I3C is backward-compatible with I2C and adds higher speed (up to 12.5 MHz), dynamic address assignment (DAA), in-band interrupt (IBI), and DMA support.

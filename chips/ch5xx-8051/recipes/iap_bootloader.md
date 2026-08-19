@@ -2,6 +2,11 @@
 
 > **Summary**: Implement IAP bootloader and firmware update on CH5xx 8051 chips -- jump to bootloader, user application design, and ISP programming.
 
+> Applies to: CH543, CH545, CH549, CH552, CH554, CH555, and CH559; confirm the exact part number before coding.
+> SDK/EVT: CH5xx EVT-style WCH package for Keil C51 or SDCC.
+> Evidence: `chips/ch5xx-8051/resources/`, closest `chips/ch5xx-8051/resources/EXAM/` example, and this recipe path `chips/ch5xx-8051/recipes/iap_bootloader.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Trigger Intent
 
 - "IAP bootloader"

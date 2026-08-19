@@ -1,5 +1,10 @@
 # Recipe: Flash Storage
 
+> Applies to: CH569; confirm the exact part number before coding.
+> SDK/EVT: CH56x EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch56x-ethernet/resources/`, closest `chips/ch56x-ethernet/resources/EXAM/` example, and this recipe path `chips/ch56x-ethernet/recipes/flash_storage.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 Read, write, and erase Flash memory for persistent data storage on CH56x chips.

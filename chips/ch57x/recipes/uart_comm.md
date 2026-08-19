@@ -2,6 +2,10 @@
 
 > **适用摘要**: 配置 UART 串口通信，包括初始化、发送、接收和中断驱动。
 
+> SDK/EVT: CH57xEVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch57x/resources/`, closest `chips/ch57x/resources/EXAM/` example, and this recipe path `chips/ch57x/recipes/uart_comm.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "配置 UART"

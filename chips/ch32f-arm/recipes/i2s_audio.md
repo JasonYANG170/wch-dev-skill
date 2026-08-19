@@ -1,5 +1,10 @@
 # Recipe: I2S Audio Interface
 
+> Applies to: CH32F103, CH32F20x, and CH32M030; confirm the exact part number before coding.
+> SDK/EVT: CH32F/CH32M EVT-style WCH package for Keil MDK or MounRiver Studio.
+> Evidence: `chips/ch32f-arm/resources/`, closest `chips/ch32f-arm/resources/EXAM/` example, and this recipe path `chips/ch32f-arm/recipes/i2s_audio.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 Configure the I2S (Inter-IC Sound) peripheral on CH32F20x for digital audio data transfer. I2S is built on top of the SPI peripheral (SPI2/SPI3) and supports master/slave modes with 16-bit or 32-bit data formats.

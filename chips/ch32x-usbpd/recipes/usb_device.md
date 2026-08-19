@@ -2,6 +2,10 @@
 
 > **Summary**: Configure USB Full-Speed device mode (CDC, HID, Vendor) on CH32X/CH6xx chips.
 
+> Applies to: CH32X035, CH32X315, CH643, CH641, and CH634 where firmware examples exist; confirm the exact part number before coding.
+> SDK/EVT: CH32X/CH6xx USB-PD EVT-style WCH package.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Trigger Intent
 
 - "USB device"

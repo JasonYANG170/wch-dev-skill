@@ -1,5 +1,10 @@
 # Timer PWM
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/timer_pwm.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has 12 timers: TIM1, TIM8 (advanced), TIM2-7 (general), TIM9-12 (32-bit general). Advanced timers (TIM1, TIM8) support complementary outputs with dead-time insertion for motor control.

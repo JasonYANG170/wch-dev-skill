@@ -1,5 +1,10 @@
 # SDIO SD Card Interface
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/sdio_sdcard.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has an SDIO (Secure Digital Input/Output) controller for SD card and eMMC communication. Supports 1-bit and 4-bit bus modes, DMA transfers, and various SD card types (SDSC, SDHC, MMC).

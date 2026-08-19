@@ -1,5 +1,10 @@
 # ECDC Encryption/Decryption
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/ecdc_crypto.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has an ECDC (Encryption/Decryption Controller) peripheral supporting AES-128/192/256 with ECB and CBC block cipher modes. It can encrypt/decrypt RAM blocks in-place or between source and destination addresses.

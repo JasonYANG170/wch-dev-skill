@@ -1,5 +1,10 @@
 # Recipe: Flash Storage
 
+> Applies to: CH32V003, CH32V006, and CH32L103; confirm the exact part number before coding.
+> SDK/EVT: CH32V low-cost EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32v-lowcost/resources/`, closest `chips/ch32v-lowcost/resources/EXAM/` example, and this recipe path `chips/ch32v-lowcost/recipes/flash_storage.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Scenario
 Read, write, erase Flash memory for data storage and option byte configuration.
 

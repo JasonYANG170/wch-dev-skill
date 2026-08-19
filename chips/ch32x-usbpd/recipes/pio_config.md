@@ -2,6 +2,10 @@
 
 > **Summary**: Configure and use the PIOC programmable I/O controller on CH32X035/CH643 chips for custom serial protocols, UART emulation, I2C bit-banging, NEC IR, and single-wire communication.
 
+> Applies to: CH32X035, CH32X315, CH643, CH641, and CH634 where firmware examples exist; confirm the exact part number before coding.
+> SDK/EVT: CH32X/CH6xx USB-PD EVT-style WCH package.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Trigger Intent
 
 - "PIOC configuration"

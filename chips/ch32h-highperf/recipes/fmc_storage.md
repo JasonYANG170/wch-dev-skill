@@ -1,5 +1,10 @@
 # FMC External Memory Controller
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/fmc_storage.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has an FMC (Flexible Memory Controller) supporting external SRAM, NOR Flash, NAND Flash, and SDRAM. The FMC provides memory-mapped access with configurable timing parameters and supports 8/16/32-bit data widths.

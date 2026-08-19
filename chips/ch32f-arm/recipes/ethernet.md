@@ -1,5 +1,10 @@
 # Recipe: Ethernet (WCHNET Library)
 
+> Applies to: CH32F103, CH32F20x, and CH32M030; confirm the exact part number before coding.
+> SDK/EVT: CH32F/CH32M EVT-style WCH package for Keil MDK or MounRiver Studio.
+> Evidence: `chips/ch32f-arm/resources/`, closest `chips/ch32f-arm/resources/EXAM/` example, and this recipe path `chips/ch32f-arm/recipes/ethernet.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 Use the built-in Ethernet MAC on CH32F20x (CH32F207) with the WCHNET TCP/IP protocol stack library for TCP, UDP, DHCP, DNS, MQTT, and other network protocols. The library provides a socket-based API similar to BSD sockets.

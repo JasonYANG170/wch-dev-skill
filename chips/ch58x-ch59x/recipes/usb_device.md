@@ -2,6 +2,10 @@
 
 > **适用摘要**: 配置 CH58x/CH59x USB 设备模式（CDC、HID、自定义）
 
+> SDK/EVT: CH58x/CH59x EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch58x-ch59x/resources/`, closest `chips/ch58x-ch59x/resources/EXAM/` example, and this recipe path `chips/ch58x-ch59x/recipes/usb_device.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "USB 虚拟串口"

@@ -1,6 +1,9 @@
 # 创建新的 CH57x 项目
 
 > **适用摘要**: 从零创建一个新的 CH57x 固件项目，包含正确的项目结构、链接脚本和初始化代码。
+> Excludes: CH58x/CH59x BLE projects, CH32V/CH32F projects, and 8051 CH5xx projects.
+> SDK/EVT: CH57xEVT-style package with `SRC/`, `StdPeriphDriver/`, and `resources/EXAM/` examples.
+> Validation: example-derived.
 
 ## 触发意图
 
@@ -177,7 +180,7 @@ int main(void) {
 |---|---|---|
 | 链接错误 undefined reference | 未链接 StdPeriphDriver | 检查 .project 中的 linked resources |
 | Flash 写入失败 | 地址未对齐到 256 字节 | 确保写入地址和长度是 256 的倍数 |
-| BLE 初始化崩溃 | BLE_MEMHEAP_SIZE 太小 | 增大到至少 4KB |
+| BLE 初始化崩溃 | BLE_MEMHEAP_SIZE 太小 | 先按最近的 CH57x BLE 示例配置；常见模板使用 6KB，缩小时需要结合连接数/MTU 实测 |
 | 编译找不到头文件 | include path 缺少 StdPeriphDriver/inc | 在项目设置中添加 include path |
 
 ## 变体

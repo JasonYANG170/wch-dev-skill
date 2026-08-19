@@ -2,6 +2,9 @@
 
 > **Summary**: Configure ADC for analog-to-digital conversion on CH32X/CH6xx chips.
 
+> Applies to: CH32X035, CH32X315, CH643, CH641, and CH634 where firmware examples exist; confirm the exact part number before coding.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Trigger Intent
 
 - "ADC reading"

@@ -1,5 +1,10 @@
 # Recipe: OPA and Comparator Configuration
 
+> Applies to: CH32F103, CH32F20x, and CH32M030; confirm the exact part number before coding.
+> SDK/EVT: CH32F/CH32M EVT-style WCH package for Keil MDK or MounRiver Studio.
+> Evidence: `chips/ch32f-arm/resources/`, closest `chips/ch32f-arm/resources/EXAM/` example, and this recipe path `chips/ch32f-arm/recipes/opa_config.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 Configure the on-chip Operational Amplifier (OPA) and Comparator (CMP) peripherals on CH32F20x and CH32M030. These analog peripherals can be used for signal conditioning, voltage following, programmable gain amplification, and voltage comparison without external components.

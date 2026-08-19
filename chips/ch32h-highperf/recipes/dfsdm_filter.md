@@ -1,5 +1,10 @@
 # DFSDM Digital Filter
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/dfsdm_filter.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has a DFSDM (Digital Filter for Sigma-Delta Modulator) peripheral for high-resolution analog-to-digital conversion using external sigma-delta modulators or internal ADC data. Supports multiple channels, filters (Sinc1-Sinc5), oversampling, DMA, and various data sources (external serial, internal ADC, parallel).

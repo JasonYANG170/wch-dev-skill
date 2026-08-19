@@ -1,5 +1,10 @@
 # EXTI External Interrupts
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/exti_interrupt.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 supports external interrupts (EXTI) on GPIO pins. Each GPIO pin can be configured to generate an interrupt on rising edge, falling edge, or both. EXTI lines 0-15 map to the corresponding GPIO pin numbers across all ports.

@@ -274,4 +274,4 @@ Debug UART: UART1 at 115200 baud, 8N1 (most chips).
 ## Do Not Modify
 
 - `resources/` — API documentation source (read-only reference)
-- `SKILL.md` front matter — Skill metadata
+- `SKILL.md` front matter — Preserve unless updating skill validity, routing accuracy, or supported metadata

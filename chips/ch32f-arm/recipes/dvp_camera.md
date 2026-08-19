@@ -1,5 +1,10 @@
 # Recipe: DVP Camera Interface
 
+> Applies to: CH32F103, CH32F20x, and CH32M030; confirm the exact part number before coding.
+> SDK/EVT: CH32F/CH32M EVT-style WCH package for Keil MDK or MounRiver Studio.
+> Evidence: `chips/ch32f-arm/resources/`, closest `chips/ch32f-arm/resources/EXAM/` example, and this recipe path `chips/ch32f-arm/recipes/dvp_camera.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 Configure the Digital Video Port (DVP) interface on CH32F20x to capture image data from cameras like OV2640. Supports JPEG and RGB565 modes with DMA double-buffering.

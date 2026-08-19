@@ -2,6 +2,10 @@
 
 > **适用摘要**: 实现 BLE 吞吐量测试，通过连接事件回调连续发送通知，测量实际传输速率。
 
+> SDK/EVT: CH57xEVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch57x/resources/`, closest `chips/ch57x/resources/EXAM/` example, and this recipe path `chips/ch57x/recipes/ble_speed_test.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "BLE 速度测试"

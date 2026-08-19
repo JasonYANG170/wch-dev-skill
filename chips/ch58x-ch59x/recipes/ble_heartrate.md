@@ -2,6 +2,10 @@
 
 > **适用摘要**: 实现 CH58x/CH59x BLE 心率传感器 Profile，遵循蓝牙 SIG Heart Rate Service 规范，支持心率测量通知、电池服务和设备信息服务
 
+> SDK/EVT: CH58x/CH59x EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch58x-ch59x/resources/`, closest `chips/ch58x-ch59x/resources/EXAM/` example, and this recipe path `chips/ch58x-ch59x/recipes/ble_heartrate.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "BLE 心率"

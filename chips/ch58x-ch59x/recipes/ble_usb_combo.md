@@ -2,6 +2,10 @@
 
 > **适用摘要**: 实现 CH58x/CH59x BLE 与 USB 同时工作，BLE 收发数据通过 USB 转发，或 USB 数据通过 BLE 通知发送，使用环形缓冲区进行数据中转
 
+> SDK/EVT: CH58x/CH59x EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch58x-ch59x/resources/`, closest `chips/ch58x-ch59x/resources/EXAM/` example, and this recipe path `chips/ch58x-ch59x/recipes/ble_usb_combo.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "BLE 转 USB"

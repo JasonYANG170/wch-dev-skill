@@ -1,5 +1,11 @@
 # Recipe: Create New Project
 
+> Applies to: CH32V003, CH32V006, and CH32L103 low-cost WCH projects.
+> Excludes: CH32V general, CH32F ARM, CH57x/CH58x BLE, CH32X USB-PD-only, and CH5xx 8051 projects.
+> SDK/EVT: CH32V003/CH32V006/CH32L103 EVT-style packages for MounRiver Studio.
+> Evidence: `chips/ch32v-lowcost/resources/EXAM/CH32V003/GPIO/`, `chips/ch32v-lowcost/resources/example_list.md`, and `chips/ch32v-lowcost/resources/peripheral_api.md`.
+> Validation: example-derived.
+
 ## Scenario
 Create a new CH32V003/CH32V006/CH32L103 firmware project from scratch.
 

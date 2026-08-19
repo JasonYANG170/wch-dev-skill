@@ -1,5 +1,10 @@
 # Recipe: I2C Communication
 
+> Applies to: CH32V003, CH32V006, and CH32L103; confirm the exact part number before coding.
+> SDK/EVT: CH32V low-cost EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32v-lowcost/resources/`, closest `chips/ch32v-lowcost/resources/EXAM/` example, and this recipe path `chips/ch32v-lowcost/recipes/i2c_comm.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Scenario
 Configure I2C for master/slave communication -- 7-bit polling, 7-bit interrupt, DMA transfer, and EEPROM read/write.
 

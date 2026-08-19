@@ -2,6 +2,10 @@
 
 > **Summary**: Create a new CH32X035/CH32X315/CH643/CH641 project from scratch with proper project structure.
 
+> Applies to: CH32X035, CH32X315, CH643, CH641, and CH634 where firmware examples exist; confirm the exact part number before coding.
+> SDK/EVT: CH32X/CH6xx USB-PD EVT-style WCH package.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Trigger Intent
 
 - "Create new CH32X035 project"

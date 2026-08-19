@@ -1,5 +1,10 @@
 # Recipe: EXTI External Interrupt
 
+> Applies to: CH32V003, CH32V006, and CH32L103; confirm the exact part number before coding.
+> SDK/EVT: CH32V low-cost EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32v-lowcost/resources/`, closest `chips/ch32v-lowcost/resources/EXAM/` example, and this recipe path `chips/ch32v-lowcost/recipes/exti_interrupt.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Scenario
 Configure external interrupts (EXTI) on GPIO pins for edge-triggered wakeup, button handling, or event detection.
 

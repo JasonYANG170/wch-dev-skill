@@ -1,5 +1,10 @@
 # USB Full-Speed Device
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/usbfs_device.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has a USBFS (USB Full-Speed) peripheral supporting USB 2.0 Full-Speed (12 Mbps) device and host modes. Includes 8 endpoint buffers, configurable FIFO, and DMA support. The USBFS examples in the EVT directory include both DEVICE and HOST configurations.

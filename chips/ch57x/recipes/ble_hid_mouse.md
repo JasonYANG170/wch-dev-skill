@@ -2,6 +2,10 @@
 
 > **适用摘要**: 实现 BLE HID over GATT (HOGP) 鼠标设备，通过标准 HID 协议上报按键、移动和滚轮事件。
 
+> SDK/EVT: CH57xEVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch57x/resources/`, closest `chips/ch57x/resources/EXAM/` example, and this recipe path `chips/ch57x/recipes/ble_hid_mouse.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## 触发意图
 
 - "BLE HID 鼠标"

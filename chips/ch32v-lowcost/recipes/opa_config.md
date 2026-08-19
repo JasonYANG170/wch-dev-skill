@@ -1,5 +1,10 @@
 # Recipe: OPA (Operational Amplifier) Configuration
 
+> Applies to: CH32V003, CH32V006, and CH32L103; confirm the exact part number before coding.
+> SDK/EVT: CH32V low-cost EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32v-lowcost/resources/`, closest `chips/ch32v-lowcost/resources/EXAM/` example, and this recipe path `chips/ch32v-lowcost/recipes/opa_config.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Scenario
 Configure the on-chip operational amplifier (OPA) for voltage follower, PGA (programmable-gain amplifier), or comparator mode, and read the output via ADC.
 

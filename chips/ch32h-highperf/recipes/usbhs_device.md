@@ -1,5 +1,10 @@
 # USB High-Speed Device
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/usbhs_device.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has a USBHS (USB High-Speed) peripheral supporting USB 2.0 High-Speed (480 Mbps) device and host modes. The USBHS peripheral is separate from USBFS and provides significantly higher throughput. It uses an external ULPI PHY or internal transceiver.

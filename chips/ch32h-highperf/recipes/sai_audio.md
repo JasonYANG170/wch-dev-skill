@@ -1,5 +1,10 @@
 # SAI Serial Audio Interface
 
+> Applies to: CH32H417; confirm the exact part number before coding.
+> SDK/EVT: CH32H417 EVT-style WCH package for MounRiver Studio.
+> Evidence: `chips/ch32h-highperf/resources/`, closest `chips/ch32h-highperf/resources/EXAM/` example, and this recipe path `chips/ch32h-highperf/recipes/sai_audio.md`.
+> Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
+
 ## Overview
 
 CH32H417 has an SAI (Serial Audio Interface) for high-quality digital audio. SAI supports multiple audio protocols, configurable frame/slot structure, DMA transfers, and multiple audio blocks (SAI_Block_A, SAI_Block_B) that can operate independently or synchronously. More flexible than I2S for complex audio systems.
