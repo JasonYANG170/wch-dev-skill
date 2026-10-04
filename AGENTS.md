@@ -11,7 +11,8 @@
 
 | Architecture | Chips | Header | Build Tool | Linker Script |
 |---|---|---|---|---|
-| RISC-V (BLE) | CH57x, CH58x/CH59x | `CH57x_common.h`, `CH58x_common.h`, `CH59x_common.h` | MounRiver | `Ld/Link.ld` |
+| RISC-V (BLE) | CH572, CH58x/CH59x | `CH57x_common.h`, `CH58x_common.h`, `CH59x_common.h` | MounRiver | `Ld/Link.ld` |
+| ARM Cortex-M0 (BLE) | CH579 | `CH57x_common.h`, `CH579SFR.h` from the CH579 SDK | Keil MDK (`.uvprojx`) | Original `.uvprojx` linker settings / selected project's scatter file |
 | RISC-V (General) | CH32V103, CH32V20x, CH32V307, CH32V407 | `ch32v10x.h`, `ch32v20x.h`, `ch32v30x.h`, `ch32v4x7.h` | MounRiver | `Ld/Link.ld` |
 | RISC-V (Low-Cost) | CH32V003, CH32V006, CH32L103 | `ch32v00x.h`, `ch32l103.h` | MounRiver | `Ld/Link.ld` |
 | RISC-V (USB-PD) | CH32X035, CH32X315, CH641, CH643 | `ch32x035.h`, `ch32x3x5.h`, `ch643.h`, `ch641.h` | MounRiver | `Ld/Link.ld` |
@@ -87,7 +88,7 @@
 #include <stdio.h>
 ```
 
-### Standard BLE Project Structure (CH57x/CH58x/CH59x)
+### Standard BLE Project Structure (RISC-V CH572/CH58x/CH59x)
 ```
 MyBLEProject/
 ├── APP/
@@ -111,7 +112,11 @@ MyBLEProject/
 └── *.wvproj                  # MounRiver Studio workspace project
 ```
 
-### Standard Main Loop Pattern — BLE (CH57x)
+For CH579, copy the matching project from `chips/ch57x/resources/EXAM/CH579/` with its Keil `.uvprojx`, CMSIS includes, `startup_ARMCM0.s`, and scatter settings. The RISC-V `RVMSIS/` and `Link.ld` layout above does not apply to CH579.
+
+### BLE Initialization Outline
+
+This historical CH57x outline illustrates initialization order, not a verified template for both chips. Copy the clock, UART, BLE configuration, and initialization code from the selected chip's EVT project before generating firmware.
 ```c
 int main(void) {
     SetSysClock(CLK_SOURCE_PLL_60MHz);
@@ -175,7 +180,9 @@ void main(void) {
 
 ### Interrupt Handler Templates
 
-**RISC-V (CH57x/CH58x/CH59x — BLE chips):**
+**RISC-V interrupt attributes (CH572/CH58x/CH59x — BLE chips):**
+
+Match handler names and peripheral APIs to the selected example. CH572's bundled UART project uses `UART_IRQHandler` and `UART_*` APIs; the historical body below must not be copied as a CH572 UART template.
 ```c
 __attribute__((interrupt("WCH-Interrupt-fast")))
 __attribute__((section(".highcode")))
@@ -188,6 +195,10 @@ void UART1_IRQHandler(void) {
     }
 }
 ```
+
+**ARM Cortex-M0 (CH579):**
+
+Use the ordinary `void UART1_IRQHandler(void)` vector handler from `chips/ch57x/resources/EXAM/CH579/UART1/Main.c`, matched by `SRC/Startup/startup_ARMCM0.s`. Do not add the RISC-V `WCH-Interrupt-fast` attribute or copy its `.highcode` requirement into the Keil ARM project.
 
 **RISC-V (CH32V — StdPeriphDriver):**
 ```c
@@ -237,7 +248,7 @@ Debug UART: UART1 at 115200 baud, 8N1 (most chips).
 | Toolchain | Steps |
 |---|---|
 | MounRiver Studio (RISC-V/ARM) | 1. Open `.wvproj` → 2. Project → Build (Ctrl+B) → 3. Run → Debug (WCH-LinkE) |
-| Keil MDK (ARM/ARM7) | 1. Open `.uvproj` → 2. Build (F7) → 3. Flash (F8) |
+| Keil MDK (CH579 Cortex-M0 / other ARM / ARM7) | 1. Open the matching `.uvprojx` or `.uvproj` → 2. Build (F7) → 3. Flash (F8) |
 | Keil C51 (8051) | 1. Open `.uvproj` → 2. Build (F7) → 3. Flash via ISP or WCH-LinkE |
 
 ## BLE App Code Generation Checklist
@@ -251,7 +262,7 @@ Debug UART: UART1 at 115200 baud, 8N1 (most chips).
 - [ ] Advertising data ≤ 31 bytes (`B_MAX_ADV_LEN`)
 - [ ] Custom UUIDs are 128-bit for custom services
 - [ ] `config.h` `HAL_SLEEP` set correctly for power requirements
-- [ ] Interrupt handlers use `.highcode` section (BLE chips)
+- [ ] Interrupt handlers and RAM-code placement match the selected architecture and example; the RISC-V `.highcode` / `WCH-Interrupt-fast` template is not a CH579 requirement
 
 ## StdPeriphDriver Code Generation Checklist (CH32V/CH32F/CH32X/CH32H)
 

@@ -29,7 +29,7 @@ Use this skill when developing, porting, debugging, or reviewing WCH MCU firmwar
 ## Route First
 
 1. Identify the exact chip marking, board, SDK/EVT package, toolchain, and requested peripheral or protocol.
-2. Read `resources/chip_matrix.md` to choose `chips/<family>/`.
+2. Read `resources/chip_matrix.md` to choose `chips/<family>/`. Within CH57x, CH572 is RISC-V (MounRiver Studio), while CH579 is ARM Cortex-M0 (the bundled EVT uses Keil MDK `.uvprojx` projects under `chips/ch57x/resources/EXAM/CH579/`). Use `chips/ch57x/recipes/new_project.md` for the matching project setup.
 3. Read `resources/scenario_routing.md` if the user asks for a feature or peripheral and the correct recipe is not obvious.
 4. For implementation, read the selected family recipe under `chips/<family>/recipes/` and the closest `chips/<family>/resources/EXAM/` example.
 5. For API details, read the selected family's `chips/<family>/resources/peripheral_api.md`, `pitfalls.md`, `memory_layout.md`, or BLE/config references as needed.
@@ -52,7 +52,7 @@ If sources conflict, follow the files matching the user's selected chip and SDK/
 - Keep RISC-V, ARM Cortex-M, ARM7TDMI, and 8051 conventions separate.
 - Enable peripheral clocks and configure GPIO/pin mux before peripheral initialization.
 - Copy the closest working example structure when creating new firmware.
-- For BLE, keep the stack initialization order and memory configuration aligned with the selected example. `BLE_MEMHEAP_SIZE` is project-dependent; CH57x templates commonly use 6KB, and smaller heaps require proof.
+- For BLE, keep the stack initialization order and memory configuration aligned with the selected example. `BLE_MEMHEAP_SIZE` is project-dependent; CH572 templates commonly use 6KB, while CH579 examples may use different defaults. Copy the selected chip's config and verify changes against that project.
 - For IAP/OTA, verify bootloader offset, application linker script, vector relocation, and erase/write granularity.
 
 ## Key References

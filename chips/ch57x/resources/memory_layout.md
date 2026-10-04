@@ -137,7 +137,9 @@ Address     Size      Region
 0x0003F000  4KB       Bootloader (ROM)
 ```
 
-## Section Placement Guidelines
+## Section Placement Guidelines (CH572 GCC)
+
+These GCC section names and attributes follow the CH572 linker script. For CH579, preserve the regions and placement rules in the selected Keil project's scatter settings (`EXAM/CH579/SRC/sct/CH57x.sct`); do not copy the RISC-V `.highcode` convention into the ARM project.
 
 ### `.highcode` Section
 Use for time-critical code that must execute from RAM:

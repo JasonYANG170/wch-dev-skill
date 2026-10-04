@@ -18,7 +18,7 @@ Supported chips: CH572/CH579 (BLE), CH583/CH585/CH592/CH595 (BLE+USB), CH32V003/
 
 | Family | Directory | Chips | Architecture | Key Features |
 |--------|-----------|-------|--------------|--------------|
-| CH57x | `chips/ch57x/` | CH572, CH579 | RISC-V | BLE 5.0, LCD (CH579), NET (CH579) |
+| CH57x | `chips/ch57x/` | CH572, CH579 | CH572: RISC-V; CH579: ARM Cortex-M0 | BLE 5.0, LCD (CH579), NET (CH579) |
 | CH58x/CH59x | `chips/ch58x-ch59x/` | CH583, CH585, CH592, CH595 | RISC-V | BLE+USB, LCD, NFCA, ENCODER, KEYSCAN |
 | CH32V General | `chips/ch32v-general/` | CH32V103, CH32V20x, CH32V307, CH32V407 | RISC-V | CAN, ETH, USB, BLE, LTDC, ARGB |
 | CH32V Low-Cost | `chips/ch32v-lowcost/` | CH32V003, CH32V006, CH32L103 | RISC-V | OPA, USB-PD (CH32L103), LPTIM |
@@ -80,7 +80,7 @@ The skill defines a workflow that the AI Agent follows when generating firmware 
 | 5 | Validate | Verify API signatures, header includes, pin assignments, clock configs |
 | 6 | Confirm | Present plan: includes, pin config, init sequence, main loop |
 | 7 | Execute | Copy closest example from `resources/EXAM/`, then modify |
-| 8 | Build | RISC-V/ARM: MounRiver Studio (.wvproj). ARM7: Keil MDK. 8051: Keil C51 |
+| 8 | Build | CH572/RISC-V: MounRiver Studio (.wvproj). CH579/ARM Cortex-M0: Keil MDK (.uvprojx). Other ARM: select Keil MDK or MounRiver from the matching example. ARM7: Keil MDK. 8051: Keil C51 |
 | 9 | Debug | UART debug output (115200 baud). BLE: nRF Connect. USB-PD: USB-C analyzer |
 
 ## Covered Scenarios

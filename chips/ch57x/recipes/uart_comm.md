@@ -2,7 +2,8 @@
 
 > **适用摘要**: 配置 UART 串口通信，包括初始化、发送、接收和中断驱动。
 
-> SDK/EVT: CH57xEVT-style WCH package for MounRiver Studio.
+> SDK/EVT: CH572 EVT (RISC-V, MounRiver Studio `.wvproj`); CH579 EVT (ARM Cortex-M0, Keil MDK/uVision `.uvprojx`).
+> Scope: The existing code, pins, and addresses are historical CH57x illustrations, not validated for a specific chip. For CH572, use a matching project under `resources/EXAM/`; for CH579, use `resources/EXAM/CH579/`. Generate code from the exact-chip example and verify APIs, memory layout, and interrupt conventions against its headers, startup file, and project before use. An unqualified example path does not establish CH579 compatibility; RISC-V interrupt attributes and libraries do not apply to CH579.
 > Evidence: `chips/ch57x/resources/`, closest `chips/ch57x/resources/EXAM/` example, and this recipe path `chips/ch57x/recipes/uart_comm.md`.
 > Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
 
@@ -15,9 +16,11 @@
 
 ## 前置条件
 
+按芯片选择实际工程起点：CH572 使用 `resources/EXAM/UART/UART.wvproj`；CH579 使用 `resources/EXAM/CH579/UART1/CH57x.uvprojx`。下面的 `UART1_*` 历史示例不能直接用于 CH572；CH572 的 API 名称从其 UART 示例和头文件核对。
+
 | 条件 | 要求 |
 |---|---|
-| 参考项目 | `resources/EXAM/UART1/` |
+| 参考项目 | CH572：`resources/EXAM/UART/UART.wvproj`；CH579：`resources/EXAM/CH579/UART1/CH57x.uvprojx` |
 
 ## 分步说明
 
@@ -135,5 +138,6 @@ printf("Value: %d\n", 42);
 
 ## 参考项目
 
-- `resources/EXAM/UART1/` — UART1 收发示例
+- `resources/EXAM/UART/UART.wvproj` — CH572 UART 收发示例（RISC-V / MounRiver）
+- `resources/EXAM/CH579/UART1/CH57x.uvprojx` — CH579 UART1 收发示例（Cortex-M0 / Keil MDK）
 - `resources/EXAM/BLE/BLE_UART/` — BLE UART 透传（中断驱动）

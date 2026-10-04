@@ -18,7 +18,7 @@
 
 | 家族 | 目录 | 芯片 | 架构 | 关键特性 |
 |------|------|------|------|----------|
-| CH57x | `chips/ch57x/` | CH572, CH579 | RISC-V | BLE 5.0, LCD (CH579), NET (CH579) |
+| CH57x | `chips/ch57x/` | CH572, CH579 | CH572: RISC-V；CH579: ARM Cortex-M0 | BLE 5.0, LCD (CH579), NET (CH579) |
 | CH58x/CH59x | `chips/ch58x-ch59x/` | CH583, CH585, CH592, CH595 | RISC-V | BLE+USB, LCD, NFCA, ENCODER, KEYSCAN |
 | CH32V 通用 | `chips/ch32v-general/` | CH32V103, CH32V20x, CH32V307, CH32V407 | RISC-V | CAN, ETH, USB, BLE, LTDC, ARGB |
 | CH32V 低成本 | `chips/ch32v-lowcost/` | CH32V003, CH32V006, CH32L103 | RISC-V | OPA, USB-PD (CH32L103), LPTIM |
@@ -83,7 +83,7 @@ Skill 定义了一套工作流，AI Agent 在生成固件代码时会遵循：
 | 5 | 验证 | 确认 API 签名、头文件包含、引脚分配、时钟配置 |
 | 6 | 确认 | 向用户展示实现方案（包含、引脚、初始化序列、主循环） |
 | 7 | 执行 | 复制最接近的 EXAM 例程，然后修改适配 |
-| 8 | 构建 | RISC-V/ARM: MounRiver Studio (.wvproj)。ARM7: Keil MDK。8051: Keil C51 |
+| 8 | 构建 | CH572/RISC-V: MounRiver Studio (.wvproj)。CH579/ARM Cortex-M0: Keil MDK (.uvprojx)。其他 ARM: 按对应例程选择 Keil MDK 或 MounRiver。ARM7: Keil MDK。8051: Keil C51 |
 | 9 | 调试 | UART 调试输出（115200 波特率）。BLE: nRF Connect。USB-PD: USB-C 分析仪 |
 
 ## 覆盖场景

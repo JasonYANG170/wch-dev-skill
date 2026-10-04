@@ -4,7 +4,8 @@ Use this matrix to route a WCH request to the correct local family directory bef
 
 | Chip or Family | Directory | Architecture | Typical Header | Toolchain | Main Evidence |
 |---|---|---|---|---|---|
-| CH572, CH579 | `chips/ch57x/` | RISC-V | `CH57x_common.h` | MounRiver | BLE/RF/USB/PM examples under `resources/EXAM/` |
+| CH572 | `chips/ch57x/` | RISC-V | `CH57x_common.h` | MounRiver Studio (`.wvproj`) | `resources/EXAM/ADC/ADC.wvproj`, `resources/EXAM/SRC/Startup/startup_CH572.S` |
+| CH579 | `chips/ch57x/` | ARM Cortex-M0 | `CH57x_common.h`, `CH579SFR.h` (CH579 SDK) | Keil MDK / uVision (`.uvprojx`) | `resources/EXAM/CH579/ADC/CH57x.uvprojx`, `resources/EXAM/CH579/SRC/Startup/startup_ARMCM0.s`, `resources/EXAM/CH579/SRC/sct/CH57x.sct` |
 | CH583, CH585, CH592, CH595 | `chips/ch58x-ch59x/` | RISC-V | `CH58x_common.h`, `CH59x_common.h` | MounRiver | BLE, USB, LCD, NET, NFCA, ENCODER examples |
 | CH32V103, CH32V20x, CH32V307, CH32V407 | `chips/ch32v-general/` | RISC-V | `ch32v10x.h`, `ch32v20x.h`, `ch32v30x.h`, `ch32v4x7.h` | MounRiver | StdPeriphDriver-style examples |
 | CH32V003, CH32V006, CH32L103 | `chips/ch32v-lowcost/` | RISC-V | `ch32v00x.h`, `ch32v00X.h`, `ch32l103.h` | MounRiver | Low-cost GPIO/UART/SPI/I2C/USB-PD examples |
@@ -18,6 +19,7 @@ Use this matrix to route a WCH request to the correct local family directory bef
 ## Routing Rules
 
 - Exact chip number wins over marketing family names.
+- CH572 and CH579 share the CH57x directory and some header names, but use different cores, SDK source trees, startup files, interrupt conventions, and toolchains. CH579 examples live under `chips/ch57x/resources/EXAM/CH579/`; use that tree rather than the sibling CH572 examples.
 - If a chip appears in multiple examples, prefer the example whose header and startup file match the user's project.
 - Do not cross architecture boundaries for interrupt syntax, startup files, linker scripts, or memory qualifiers.
 - For features such as BLE, USB-PD, USB 3.0, Ethernet, and IAP, read the family recipe plus the closest `resources/EXAM/` project before writing code.

@@ -2,7 +2,8 @@
 
 > **适用摘要**: 实现 BLE HID over GATT (HOGP) 鼠标设备，通过标准 HID 协议上报按键、移动和滚轮事件。
 
-> SDK/EVT: CH57xEVT-style WCH package for MounRiver Studio.
+> SDK/EVT: CH572 EVT (RISC-V, MounRiver Studio `.wvproj`); CH579 EVT (ARM Cortex-M0, Keil MDK/uVision `.uvprojx`).
+> Scope: The existing code, pins, and addresses are historical CH57x illustrations, not validated for a specific chip. For CH572, use a matching project under `resources/EXAM/`; for CH579, use `resources/EXAM/CH579/`. Generate code from the exact-chip example and verify APIs, memory layout, and interrupt conventions against its headers, startup file, and project before use. An unqualified example path does not establish CH579 compatibility; RISC-V interrupt attributes and libraries do not apply to CH579.
 > Evidence: `chips/ch57x/resources/`, closest `chips/ch57x/resources/EXAM/` example, and this recipe path `chips/ch57x/recipes/ble_hid_mouse.md`.
 > Validation: draft metadata added from repository routing; verify APIs against selected headers/examples before code generation.
 

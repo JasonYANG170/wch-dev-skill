@@ -103,9 +103,9 @@ MyService_AddService(GATT_ALL_SERVICES);     // Custom last
 
 **Why**: The GATT server maintains a handle-based attribute table. Standard services occupy fixed handle ranges. Custom services are assigned handles after standard services.
 
-## 6. Interrupt Handler Section
+## 6. Interrupt Handler Section (CH572 RISC-V)
 
-Interrupt handlers must execute from RAM for deterministic timing.
+For CH572, use the RISC-V interrupt attributes and RAM placement from the matching example. The template below does not apply to CH579 Cortex-M0: its Keil project uses ordinary vector handlers such as `void UART1_IRQHandler(void)` in `EXAM/CH579/UART1/Main.c`, with vectors in `EXAM/CH579/SRC/Startup/startup_ARMCM0.s`.
 
 ```c
 // ❌ WRONG — interrupt in Flash section
